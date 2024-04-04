@@ -18,14 +18,15 @@ class CoreState {
         backgroundColor: backgroundColor ?? this.backgroundColor,
       );
 
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is CoreState &&
-          runtimeType == other.runtimeType &&
-          counter == other.counter &&
-          backgroundColor == other.backgroundColor;
+  // not needed in this case, key takes care of it
+  // @override
+  // bool operator ==(Object other) =>
+  //     identical(this, other) ||
+  //     other is CoreState &&
+  //         runtimeType == other.runtimeType &&
+  //         counter == other.counter &&
+  //         backgroundColor == other.backgroundColor;
 
-  @override
-  int get hashCode => counter.hashCode ^ backgroundColor.hashCode;
+  // @override
+  // int get hashCode => counter.hashCode ^ backgroundColor.hashCode;
 }
